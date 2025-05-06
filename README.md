@@ -32,7 +32,7 @@ A simple proxy client
 - .NET 6.0 x64
 
 ## Sponsor
-<a href="https://discord.gg/gZbH6f6m"><img src="https://avatars.githubusercontent.com/u/205180388?v=4" alt="NetchLK" width="200"/></a>
+<a href="https://discord.gg/gZbH6f6m"><img src="https://avatars.githubusercontent.com/u/205180388?v=4" alt="NetPlusLK" width="200"/></a>
 
 ## License
 Netch is licensed under the [GPLv3](https://raw.githubusercontent.com/netchx/netch/main/LICENSE) license
