@@ -104,3 +104,4 @@ if ( $Configuration.Equals('Release') ) {
 
 Pop-Location
 exit 0
+
