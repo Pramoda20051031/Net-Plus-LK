@@ -9,11 +9,11 @@ namespace Netch.Controllers;
 
 public static class UpdateChecker
 {
-    public const string Owner = @"Danushka-Madushan";
-    public const string Repo = @"Netch-LK";
+    public const string Owner = @"Pramoda20051031";
+    public const string Repo = @"Netplus-LK";
 
-    public const string Name = @"Netch-LK";
-    public const string Copyright = @"Copyright © 2019 - 2022";
+    public const string Name = @"Netplus-LK";
+    public const string Copyright = @"Copyright © 2019 - 2025";
 
     public const string AssemblyVersion = @"2.0.1";
     private const string Suffix = @"";

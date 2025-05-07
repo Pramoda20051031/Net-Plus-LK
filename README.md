@@ -3,13 +3,13 @@
 
 <div align="center">
 
-# Net Plus LK
+# Netplus LK
 A simple proxy client
 
 [![](https://img.shields.io/badge/telegram-group-green?style=flat-square)](https://t.me/netch_group)
 [![](https://img.shields.io/badge/telegram-channel-blue?style=flat-square)](https://t.me/netch_channel)
-[![](https://img.shields.io/github/downloads/netchx/netch/total.svg?style=flat-square)](https://github.com/Pramoda20051031/Net-Plus-LK/releases)
-[![](https://img.shields.io/github/v/release/Pramoda20051031/Net-Plus-LK?style=flat-square)](https://github.com/Pramoda20051031/Net-Plus-LK/releases)
+[![](https://img.shields.io/github/downloads/netchx/netch/total.svg?style=flat-square)](https://github.com/Pramoda20051031/Netplus-LK/releases)
+[![](https://img.shields.io/github/v/release/Pramoda20051031/Netplus-LK?style=flat-square)](https://github.com/Pramoda20051031/Netplus-LK/releases)
 </div>
 
 ### Modes
