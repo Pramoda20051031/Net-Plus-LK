@@ -41,7 +41,7 @@
             this.ChannelLabel.Size = new System.Drawing.Size(118, 17);
             this.ChannelLabel.TabIndex = 5;
             this.ChannelLabel.TabStop = true;
-            this.ChannelLabel.Text = "Netch LK - Discord";
+            this.ChannelLabel.Text = "Netplus LK - Discord";
             this.ChannelLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChannelLabel_LinkClicked);
             // 
             // NetchPictureBox

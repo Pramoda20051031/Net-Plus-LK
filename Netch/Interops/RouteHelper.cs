@@ -20,6 +20,9 @@ public static unsafe class RouteHelper
 
     public static bool CreateUnicastIPCS(AddressFamily inet, string address, byte cidr, ulong index)
     {
+        if (!OperatingSystem.IsWindowsVersionAtLeast(8, 1))
+            throw new PlatformNotSupportedException("This functionality requires Windows 8.1 or later.");
+
         MIB_UNICASTIPADDRESS_ROW addr;
         InitializeUnicastIpAddressEntry(&addr);
 

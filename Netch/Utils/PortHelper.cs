@@ -33,6 +33,9 @@ public static class PortHelper
         if (port == 0)
             throw new ArgumentOutOfRangeException();
 
+        if (!OperatingSystem.IsWindowsVersionAtLeast(8, 1))
+            throw new PlatformNotSupportedException("This functionality requires Windows 8.1 or later.");
+
         switch (inet)
         {
             case AddressFamily.InterNetwork:

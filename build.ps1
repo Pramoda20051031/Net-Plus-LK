@@ -25,21 +25,21 @@ param (
 Push-Location (Split-Path $MyInvocation.MyCommand.Path -Parent)
 
 if ( Test-Path -Path $OutputPath ) {
-    rm -Recurse -Force $OutputPath
+    Remove-Item -Recurse -Force $OutputPath
 }
 New-Item -ItemType Directory -Name $OutputPath | Out-Null
 
 Push-Location $OutputPath
 New-Item -ItemType Directory -Name 'bin'  | Out-Null
-cp -Recurse -Force '..\Storage\i18n' '.'  | Out-Null
-cp -Recurse -Force '..\Storage\mode' '.'  | Out-Null
-cp -Recurse -Force '..\Storage\stun.txt' 'bin'  | Out-Null
-cp -Recurse -Force '..\Storage\nfdriver.sys' 'bin'  | Out-Null
-cp -Recurse -Force '..\Storage\aiodns.conf' 'bin'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\i18n' '.'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\mode' '.'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\stun.txt' 'bin'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\nfdriver.sys' 'bin'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\aiodns.conf' 'bin'  | Out-Null
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb' -OutFile 'bin\GeoLite2-Country.mmdb'
-#cp -Recurse -Force '..\Storage\GeoLite2-Country.mmdb' 'bin'  | Out-Null
-cp -Recurse -Force '..\Storage\tun2socks.bin' 'bin'  | Out-Null
-cp -Recurse -Force '..\Storage\README.md' 'bin'  | Out-Null
+#Copy-Item -Recurse -Force '..\Storage\GeoLite2-Country.mmdb' 'bin'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\tun2socks.bin' 'bin'  | Out-Null
+Copy-Item -Recurse -Force '..\Storage\README.md' 'bin'  | Out-Null
 Pop-Location
 
 if ( -Not ( Test-Path '.\Other\release' ) ) {
@@ -48,9 +48,9 @@ if ( -Not ( Test-Path '.\Other\release' ) ) {
 		exit $lastExitCode
 	}
 }
-cp -Force '.\Other\release\*.bin' "$OutputPath\bin"
-cp -Force '.\Other\release\*.dll' "$OutputPath\bin"
-cp -Force '.\Other\release\*.exe' "$OutputPath\bin"
+Copy-Item -Force '.\Other\release\*.bin' "$OutputPath\bin"
+Copy-Item -Force '.\Other\release\*.dll' "$OutputPath\bin"
+Copy-Item -Force '.\Other\release\*.exe' "$OutputPath\bin"
 
 if ( -Not ( Test-Path ".\Netch\bin\$Configuration" ) ) {
 	Write-Host
@@ -70,7 +70,7 @@ if ( -Not ( Test-Path ".\Netch\bin\$Configuration" ) ) {
 		'.\Netch\Netch.csproj'
 	if ( -Not $? ) { exit $lastExitCode }
 }
-cp -Force ".\Netch\bin\$Configuration\Netch.exe" $OutputPath
+Copy-Item -Force ".\Netch\bin\$Configuration\Netch.exe" $OutputPath
 
 if ( -Not ( Test-Path ".\Redirector\bin\$Configuration" ) ) {
 	Write-Host
@@ -82,8 +82,8 @@ if ( -Not ( Test-Path ".\Redirector\bin\$Configuration" ) ) {
 		'.\Redirector\Redirector.vcxproj'
 	if ( -Not $? ) { exit $lastExitCode }
 }
-cp -Force ".\Redirector\bin\$Configuration\nfapi.dll"      "$OutputPath\bin"
-cp -Force ".\Redirector\bin\$Configuration\Redirector.bin" "$OutputPath\bin"
+Copy-Item -Force ".\Redirector\bin\$Configuration\nfapi.dll"      "$OutputPath\bin"
+Copy-Item -Force ".\Redirector\bin\$Configuration\Redirector.bin" "$OutputPath\bin"
 
 if ( -Not ( Test-Path ".\RouteHelper\bin\$Configuration" ) ) {
 	Write-Host
@@ -95,11 +95,11 @@ if ( -Not ( Test-Path ".\RouteHelper\bin\$Configuration" ) ) {
 		'.\RouteHelper\RouteHelper.vcxproj'
 	if ( -Not $? ) { exit $lastExitCode }
 }
-cp -Force ".\RouteHelper\bin\$Configuration\RouteHelper.bin" "$OutputPath\bin"
+Copy-Item -Force ".\RouteHelper\bin\$Configuration\RouteHelper.bin" "$OutputPath\bin"
 
 if ( $Configuration.Equals('Release') ) {
-	rm -Force "$OutputPath\*.pdb"
-	rm -Force "$OutputPath\*.xml"
+	Remove-Item -Force "$OutputPath\*.pdb"
+	Remove-Item -Force "$OutputPath\*.xml"
 }
 
 Pop-Location
