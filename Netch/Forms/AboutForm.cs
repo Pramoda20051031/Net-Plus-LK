@@ -19,12 +19,12 @@ public partial class AboutForm : Form
 
     private void NetchPictureBox_Click(object sender, EventArgs e)
     {
-        Utils.Utils.Open("https://github.com/Pramoda20051031/Net-Plus-LK");
+        Utils.Utils.Open("https://github.com/Danushka-Madushan/Netch-LK");
     }
 
     private void ChannelLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-        Utils.Utils.Open("https://discord.com/invite/gZbH6f6m");
+        Utils.Utils.Open("https://discord.gg/4RF5ZJa2bF");
     }
 
     private void SponsorPictureBox_Click(object sender, EventArgs e)
